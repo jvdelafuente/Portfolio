@@ -6,8 +6,9 @@ import markdownConfig from './markdown.config';
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import partytown from "@astrojs/partytown";
-
 import robotsTxt from "astro-robots-txt";
+
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,8 +17,7 @@ export default defineConfig({
   markdown: {
     ...markdownConfig
   },
-  integrations: [
-    tailwind({
+  integrations: [tailwind({
     config: {
       applyBaseStyles: false
     }
@@ -32,10 +32,7 @@ export default defineConfig({
       forward: ["dataLayer.push"]
     }
   }), robotsTxt({
-    sitemap: [
-      'https://www.rohitk06.site/sitemap-0.xml',
-      'http://www.k06.site/sitemap-index.xml',
-    ],
+    sitemap: ['https://www.rohitk06.site/sitemap-0.xml', 'http://www.k06.site/sitemap-index.xml']
   })]
   // output: "server",
   // adapter: vercel({
@@ -47,4 +44,7 @@ export default defineConfig({
   //   },
   //   imageService: true
   // })
+  ,
+  output: "server",
+  adapter: netlify()
 });
