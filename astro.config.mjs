@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import compress from "astro-compress";
+// import compress from "astro-compress";
 import react from "@astrojs/react";
 import markdownConfig from './markdown.config';
 import mdx from "@astrojs/mdx";
@@ -21,7 +21,7 @@ export default defineConfig({
     config: {
       applyBaseStyles: false
     }
-  }), compress(), react(), mdx({
+  }), react(), mdx({
     ...markdownConfig,
     syntaxHighlight: "shiki",
     shikiConfig: {
