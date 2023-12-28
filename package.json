@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^2.0.1",
+    "@astrojs/netlify": "^4.0.1",
     "@astrojs/partytown": "^2.0.2",
     "@astrojs/react": "^3.0.7",
     "@astrojs/rss": "^4.0.1",
@@ -22,6 +23,7 @@
     "@fontsource/inter": "^5.0.16",
     "@fontsource/poppins": "^5.0.8",
     "@heroicons/react": "^2.1.1",
+    "@img/sharp-linux-x64": "^0.33.1",
     "@nanostores/react": "^0.7.1",
     "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.45",
@@ -43,6 +45,7 @@
     "remark-collapse": "^0.1.2",
     "remark-math": "^6.0.0",
     "remark-toc": "^9.0.0",
+    "sharp": "^0.33.1",
     "tailwindcss": "^3.3.7"
   }
 }
