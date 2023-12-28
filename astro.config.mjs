@@ -8,10 +8,12 @@ import sitemap from "@astrojs/sitemap";
 import partytown from "@astrojs/partytown";
 import robotsTxt from "astro-robots-txt";
 
-import netlify from "@astrojs/netlify";
+import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
+  output: 'server',
+  adapter: netlify(),
   site: "https://www.linkedin.com/in/javiergarciadelafuente/",
   prefetch: true,
   markdown: {
